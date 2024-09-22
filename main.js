@@ -1,6 +1,26 @@
 let tgform = document.getElementById("location");
 let modal = document.getElementById("modal");
 let local = JSON.parse(localStorage.getItem("notes")) || [];
+// new speech recognition object
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+recognition.interimResults = true;
+console.log(recognition)
+recognition.addEventListener('result', (event) => {
+    const transcript = Array.from(event.results)
+        .map(result => result[0].transcript)
+        .join('');
+    console.log('Current input:', transcript);
+document.getElementById("input").innerText = transcript;
+});
+
+recognition.addEventListener('end', () => {
+    console.log('User has stopped talking.');
+    recognition.stop(); // Restart recognition if needed
+});
+
+// Start recognition
+recognition.start();
+
 tgform.onclick = function() {
     modals();
 }

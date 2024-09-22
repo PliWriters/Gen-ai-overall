@@ -134,7 +134,7 @@ overflow-y: scroll;
 }
 #textarea {
  height: 300px;
- width: 100%;
+ width: 99%;
  color: #fff;
  background-color: #000;
  border: solid 1.6px #47474F;
@@ -153,7 +153,7 @@ padding-right: 5px;
     color: #fff;
     background-color: #1F0AEA;
 }
-#savei {
+#savei, #deletei {
     height: 40px;
     width: 120px;
     color: #fff;
@@ -162,6 +162,7 @@ padding-right: 5px;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 520;
+    margin: 5%;
 }
 #notes {
 height: calc(100% - 50px);
@@ -172,19 +173,26 @@ overflow-y: mandatory;
 }
 #notes div {
     height: auto;
-    min-height: 200px;
-    width: 90%;
+    min-height: 300px;
+    width: 80%;
     list-style: none;
     font-size: 18px;
     font-weight: 520;
-    border: solid 2px #451EFD;
+    border: solid 2px #47474F;
     overflow-x: scroll;
     padding: 5px;
     border-radius: 10px;
-    margin: 5%;
+    margin: 10%;
     display: block;
-    justify-content: center;
 }
-#notes div h2 {
-    
+.note h3 {
+text-align: left;
+font-size: 20px;
+font-weight: 550;
+margin-bottom: 5px;
+}
+.note p {
+ text-align: left;
+font-size: 16px;
+font-weight: 520;
 }
