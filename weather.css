@@ -9,7 +9,7 @@
 body {
     height: 100%;
     width: 100%;
-    background: url("F6639389-B688-4CF1-8419-17590A2BF010.jpeg") #000 center no-repeat;
+    background: url("F6639389-B688-4CF1-8419-17590A2BF010.jpeg") center no-repeat;
 .container {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
